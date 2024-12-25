@@ -1,0 +1,266 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.2); /* Una capa sutil oscura */
+}
+
+/* Fondo animado: gradiente dinámico */
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff00cc, #333399, #370064, #ff0066);
+  background-size: 400% 400%;
+  animation: gradientAnimation 30s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Simulación de Barra */
+.header-bar {
+  position: absolute;
+  top: 10px; /* Ubicado en la parte superior */
+  left: 20px; /* Margen desde el lado izquierdo para JR-DEV */
+  right: 20px; /* Margen desde el lado derecho para Ingeniería en Informática */
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos entre los extremos */
+  align-items: center; /* Alinea verticalmente */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.role {
+  color: #ffffff; /* Color de JR-DEV */
+  text-shadow: 0 0 10px #e056fd, 0 0 30px #ffffff;
+}
+
+.info {
+  color: #ffffff; /* Color de Ingeniería en Informática */
+  text-shadow: 0 0 10px #e056fd, 0 0 30px #ffffff;
+}
+
+/* Contenido Principal */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.name {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 10px #88008d, 0 0 30px #ffffff;
+}
+
+.dynamic-text {
+  font-size: 3rem;
+  font-family: 'Roboto Condensed', sans-serif; /* Usa la nueva fuente */
+  color: #e056fd;
+  text-shadow: 0 0 10px #88008d, 0 0 30px #ffffff;
+  margin-top: 10px;
+}
+
+
+.word-placeholder {
+  display: inline-block;
+  min-width: 10ch; /* Fija un ancho mínimo para las palabras dinámicas */
+  text-align: left;
+}
+
+/* Sección de descripción */
+.description-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding: 20px 40px;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: #dcdde1;
+  max-width: 800px;
+  text-shadow: 0 0 5px #dcdde1;
+}
+/*-----------------------------------------------------------------*/
+/* Menú vertical */
+.vertical-menu {
+  position: absolute;
+  top: 50%; /* Centrado verticalmente */
+  right: 5%; /* Se ajusta al ancho de la pantalla */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaciado entre botones */
+  z-index: 10;
+}
+
+.menu-item {
+  position: relative;
+  width: 5vw; /* Botones se adaptan al ancho de la pantalla */
+  height: 5vw; /* Altura proporcional al ancho */
+  max-width: 70px; /* Tamaño máximo */
+  max-height: 70px;
+  background: linear-gradient(45deg, #ff00cc, #333399, #001f19, #ff0066);
+  background-size: 400% 400%; /* Igual que el fondo */
+  animation: gradientAnimation 15s ease infinite; /* Reutilizamos la animación del fondo */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.1); /* Efecto de ampliación */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.menu-icon {
+  font-size: clamp(1.2rem, 2vw, 2rem); /* Tamaño dinámico con un mínimo y un máximo */
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff, 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Recuadro rectangular */
+.menu-card {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 10px); /* Aparece pegado al botón con un pequeño margen */
+  transform: translateY(-50%);
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover .menu-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0); /* Mantiene su posición y aparece suavemente */
+}
+
+/* Fondo animado: gradiente dinámico */
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff00cc, #333399, #001f19, #ff0066);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsividad: Botones hacia Arriba */
+@media (max-width: 768px) {
+  .vertical-menu {
+    top: 20%; /* Mueve los botones hacia arriba */
+    right: 5%; /* Mantiene su posición horizontal */
+    transform: translateY(0); /* Elimina el centrado vertical */
+  }
+}
+
+@media (max-width: 480px) {
+  .vertical-menu {
+    top: 10%; /* Botones aún más cerca del borde superior */
+    right: 5%; /* Mantiene su posición horizontal */
+    transform: translateY(0); /* Elimina el centrado vertical */
+  }
+
+  .menu-item {
+    width: 10vw; /* Botones más pequeños */
+    height: 10vw;
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .menu-icon {
+    font-size: 1.2rem; /* Íconos más pequeños */
+  }
+}
+/*-----------------------------------------------------------*/
+/* Barra Inferior */
+.footer-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.384);
+  display: flex;
+  justify-content: center; /* Centra los logos horizontalmente */
+  align-items: center; /* Centra los logos verticalmente */
+  z-index: 10;
+}
+
+.logos {
+  display: flex;
+  gap: 40px; /* Espaciado entre los logos */
+}
+
+.logos img {
+  height: 60px; /* Tamaño de los logos */
+  width: auto;
+  filter: drop-shadow(0 0 5px #ffffff);
+  transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+  transform: scale(1.2); /* Efecto de ampliación al pasar el mouse */
+}
