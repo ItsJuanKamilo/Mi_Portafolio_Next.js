@@ -73,17 +73,17 @@ function App() {
       {/* Barra Inferior de Logos */}
       <div className="footer-bar">
         <div className="logos">
-        <img src="/My_Web/logos/html5.png" alt="HTML5" />
-          <img src="/My_Web/logos/css3.png" alt="CSS3" />
-          <img src="/My_Web/logos/javascript.png" alt="JavaScript" />
-          <img src="/My_Web/logos/react.png" alt="React" />
-          <img src="/My_Web/logos/nodejs.png" alt="Node.js" />
-          <img src="/My_Web/logos/aws.png" alt="AWS" />
-          <img src="/My_Web/logos/laravel.png" alt="Laravel" />
-          <img src="/My_Web/logos/python.png" alt="Python" />
-          <img src="/My_Web/logos/vuejs.png" alt="Vuejs" />
-          <img src="/My_Web/logos/postgresql.png" alt="Postgres" />
-          <img src="/My_Web/logos/php.png" alt="Php" />
+        <img src="/logos/html5.png" alt="HTML5" />
+          <img src="/logos/css3.png" alt="CSS3" />
+          <img src="/logos/javascript.png" alt="JavaScript" />
+          <img src="/logos/react.png" alt="React" />
+          <img src="/logos/nodejs.png" alt="Node.js" />
+          <img src="/logos/aws.png" alt="AWS" />
+          <img src="/logos/laravel.png" alt="Laravel" />
+          <img src="/logos/python.png" alt="Python" />
+          <img src="/logos/vuejs.png" alt="Vuejs" />
+          <img src="/logos/postgresql.png" alt="Postgres" />
+          <img src="/logos/php.png" alt="Php" />
         </div>
       </div>
     </div>
