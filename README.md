@@ -1,8 +1,9 @@
-# React + Vite
+# Juan Leiton
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Actualmente, cuento con experiencia en desarrollo de
+software, análisis de datos y manejo de bases de datos. Me
+interesa trabajar con soluciones en la nube utilizando AWS,
+en lo cual estoy aprendiendo constantemente. Además, me
+he dedicado a programar tanto aplicaciones web como
+aplicaciones móviles.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
