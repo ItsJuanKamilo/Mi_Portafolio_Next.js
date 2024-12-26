@@ -39,7 +39,7 @@ function App() {
           </div>
           <div className="menu-card">GitHub</div>
         </a>
-        <a href="/My_Web/CV_JUAN_LEITON.pdf" target="_blank" rel="noopener noreferrer" className="menu-item">
+        <a href="/CV_JUAN_LEITON.pdf" target="_blank" rel="noopener noreferrer" className="menu-item">
           <div className="menu-icon">
             <i className="fa-regular fa-file-pdf"></i>
           </div>
