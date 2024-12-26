@@ -23,6 +23,7 @@ function App() {
       <div className="header-bar">
         <div className="role">JR-DEV</div>
         <div className="info">Ingeniería en Informática</div>
+        <div className="info">Version 1.0</div>
       </div>
 
       {/* Menú vertical con íconos */}
