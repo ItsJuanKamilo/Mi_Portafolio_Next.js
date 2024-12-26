@@ -2,6 +2,7 @@
   "name": "mi_portafolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://itsjuankamilo.github.io/My_Web/",
   "type": "module",
   "scripts": {
     "dev": "vite",
