@@ -8,7 +8,8 @@
 html, body {
   height: 100%;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
+  overflow-y: auto; /* Permite scroll vertical si es necesario */
+  overflow-x: hidden; /* Evita scroll horizontal */
 }
 
 body {
@@ -42,31 +43,31 @@ body {
   }
 }
 
-/* Simulación de Barra */
+/* Barra superior */
 .header-bar {
   position: absolute;
-  top: 10px; /* Ubicado en la parte superior */
-  left: 20px; /* Margen desde el lado izquierdo para JR-DEV */
-  right: 20px; /* Margen desde el lado derecho para Ingeniería en Informática */
+  top: 10px;
+  left: 20px;
+  right: 20px;
   display: flex;
-  justify-content: space-between; /* Distribuye los elementos entre los extremos */
-  align-items: center; /* Alinea verticalmente */
+  justify-content: space-between;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
 }
 
 .role {
-  color: #ffffff; /* Color de JR-DEV */
+  color: #ffffff;
   text-shadow: 0 0 10px #e056fd, 0 0 30px #ffffff;
 }
 
 .info {
-  color: #ffffff; /* Color de Ingeniería en Informática */
+  color: #ffffff;
   text-shadow: 0 0 10px #e056fd, 0 0 30px #ffffff;
 }
 
-/* Contenido Principal */
+/* Contenido principal */
 .main-content {
   flex: 1;
   display: flex;
@@ -78,20 +79,19 @@ body {
 }
 
 .name {
-  font-size: 4.5rem;
+  font-size: clamp(2rem, 5vw, 4.5rem); /* Ajuste dinámico */
   font-weight: bold;
   color: #ffffff;
   text-shadow: 0 0 10px #88008d, 0 0 30px #ffffff;
 }
 
 .dynamic-text {
-  font-size: 3rem;
-  font-family: 'Roboto Condensed', sans-serif; /* Usa la nueva fuente */
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Ajuste dinámico */
+  font-family: 'Roboto Condensed', sans-serif;
   color: #e056fd;
   text-shadow: 0 0 10px #88008d, 0 0 30px #ffffff;
   margin-top: 10px;
 }
-
 
 .word-placeholder {
   display: inline-block;
@@ -110,17 +110,17 @@ body {
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Ajuste dinámico */
   color: #dcdde1;
   max-width: 800px;
   text-shadow: 0 0 5px #dcdde1;
 }
-/*-----------------------------------------------------------------*/
+
 /* Menú vertical */
 .vertical-menu {
   position: absolute;
-  top: 50%; /* Centrado verticalmente */
-  right: 5%; /* Se ajusta al ancho de la pantalla */
+  top: 50%;
+  right: 5%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -130,13 +130,11 @@ body {
 
 .menu-item {
   position: relative;
-  width: 5vw; /* Botones se adaptan al ancho de la pantalla */
-  height: 5vw; /* Altura proporcional al ancho */
-  max-width: 70px; /* Tamaño máximo */
-  max-height: 70px;
+  width: clamp(50px, 8vw, 70px);
+  height: clamp(50px, 8vw, 70px);
   background: linear-gradient(45deg, #ff00cc, #333399, #001f19, #ff0066);
-  background-size: 400% 400%; /* Igual que el fondo */
-  animation: gradientAnimation 15s ease infinite; /* Reutilizamos la animación del fondo */
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -147,29 +145,28 @@ body {
 }
 
 .menu-item:hover {
-  transform: scale(1.1); /* Efecto de ampliación */
+  transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .menu-icon {
-  font-size: clamp(1.2rem, 2vw, 2rem); /* Tamaño dinámico con un mínimo y un máximo */
+  font-size: clamp(1rem, 2vw, 2rem); /* Ajuste dinámico */
   color: #ffffff;
   text-shadow: 0 0 5px #ffffff, 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
-/* Recuadro rectangular */
 .menu-card {
   position: absolute;
   top: 50%;
-  right: calc(100% + 10px); /* Aparece pegado al botón con un pequeño margen */
+  right: calc(100% + 10px);
   transform: translateY(-50%);
   padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  background: rgba(255, 255, 255, 0.9);
   color: #333;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   font-weight: bold;
   border-radius: 5px;
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  white-space: nowrap;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
@@ -179,88 +176,77 @@ body {
 .menu-item:hover .menu-card {
   opacity: 1;
   visibility: visible;
-  transform: translateY(-50%) translateX(0); /* Mantiene su posición y aparece suavemente */
+  transform: translateY(-50%) translateX(0);
 }
 
-/* Fondo animado: gradiente dinámico */
-.animated-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #ff00cc, #333399, #001f19, #ff0066);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  z-index: -1;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Responsividad: Botones hacia Arriba */
-@media (max-width: 768px) {
-  .vertical-menu {
-    top: 20%; /* Mueve los botones hacia arriba */
-    right: 5%; /* Mantiene su posición horizontal */
-    transform: translateY(0); /* Elimina el centrado vertical */
-  }
-}
-
-@media (max-width: 480px) {
-  .vertical-menu {
-    top: 10%; /* Botones aún más cerca del borde superior */
-    right: 5%; /* Mantiene su posición horizontal */
-    transform: translateY(0); /* Elimina el centrado vertical */
-  }
-
-  .menu-item {
-    width: 10vw; /* Botones más pequeños */
-    height: 10vw;
-    max-width: 50px;
-    max-height: 50px;
-  }
-
-  .menu-icon {
-    font-size: 1.2rem; /* Íconos más pequeños */
-  }
-}
-/*-----------------------------------------------------------*/
 /* Barra Inferior */
 .footer-bar {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: clamp(60px, 10vw, 80px);
   background: rgba(0, 0, 0, 0.384);
   display: flex;
-  justify-content: center; /* Centra los logos horizontalmente */
-  align-items: center; /* Centra los logos verticalmente */
+  justify-content: center;
+  align-items: center;
   z-index: 10;
 }
 
 .logos {
   display: flex;
-  gap: 40px; /* Espaciado entre los logos */
+  gap: 20px;
 }
 
 .logos img {
-  height: 60px; /* Tamaño de los logos */
+  height: clamp(30px, 5vw, 60px);
   width: auto;
   filter: drop-shadow(0 0 5px #ffffff);
   transition: transform 0.3s ease;
 }
 
 .logos img:hover {
-  transform: scale(1.2); /* Efecto de ampliación al pasar el mouse */
+  transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .main-content {
+    padding-left: 20px;
+  }
+
+  .description-section {
+    padding: 10px 20px;
+  }
+
+  .vertical-menu {
+    top: 20%;
+    right: 5%;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding-left: 10px;
+  }
+
+  .description-section {
+    padding: 5px 10px;
+  }
+
+  .vertical-menu {
+    top: 10%;
+    right: 5%;
+    transform: translateY(0);
+  }
+
+  .menu-item {
+    width: clamp(40px, 10vw, 50px);
+    height: clamp(40px, 10vw, 50px);
+  }
+
+  .menu-icon {
+    font-size: 1.2rem;
+  }
 }
