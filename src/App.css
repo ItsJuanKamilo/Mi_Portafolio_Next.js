@@ -194,19 +194,21 @@ body {
   width: 100%;
   height: clamp(60px, 10vw, 80px);
   background: rgba(0, 0, 0, 0.384);
+  overflow: hidden; /* Oculta los logos que están fuera del área visible */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
 }
 
+/* Contenedor de Logos */
 .logos {
   display: flex;
-  flex-wrap: wrap; /* Permite que los logos se ajusten en varias líneas si es necesario */
-  gap: 20px; /* Espaciado entre los logos */
-  justify-content: center; /* Centra los logos horizontalmente */
+  gap: 50px; /* Espaciado entre los logos */
+  animation: scroll-logos 20s linear infinite; /* Ajusta la duración según tus necesidades */
 }
 
+/* Estilo de los Logos */
 .logos img {
   height: clamp(30px, 5vw, 60px); /* Ajuste dinámico del tamaño de los logos */
   width: auto;
@@ -217,6 +219,17 @@ body {
 .logos img:hover {
   transform: scale(1.2); /* Efecto de ampliación al pasar el mouse */
 }
+
+/* Animación para desplazar los logos */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(200%); /* Inicia fuera de la pantalla por la derecha */
+  }
+  100% {
+    transform: translateX(-200%); /* Termina fuera de la pantalla por la izquierda */
+  }
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
