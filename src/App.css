@@ -263,7 +263,7 @@ body {
 
   .vertical-menu {
     top: 15%; /* Menú más cerca del borde superior */
-    right: 10%; /* Mantiene la posición desde el borde derecho */
+    right: 9%; /* Mantiene la posición desde el borde derecho */
   }
 
   .menu-item {
