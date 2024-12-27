@@ -46,12 +46,12 @@ body {
 /* Barra superior */
 .header-bar {
   position: absolute;
-  top: 10px;
+  top: -20px;
   left: 20px;
   right: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Espacia los elementos a ambos extremos */
+  align-items: center; /* Centra verticalmente */
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
@@ -65,6 +65,18 @@ body {
 .info {
   color: #ffffff;
   text-shadow: 0 0 10px #e056fd, 0 0 30px #ffffff;
+}
+
+.logo {
+  width: 200px; /* Tamaño del logo */
+  height: auto;
+  margin-left: auto; /* Empuja el logo hacia la derecha */
+  transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Efecto de ampliación */
 }
 
 /* Contenido principal */
