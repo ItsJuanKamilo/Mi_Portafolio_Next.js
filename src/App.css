@@ -262,7 +262,7 @@ body {
   }
 
   .vertical-menu {
-    top: 20%; /* Menú más cerca del borde superior */
+    top: 15%; /* Menú más cerca del borde superior */
     right: 10%; /* Mantiene la posición desde el borde derecho */
   }
 
@@ -272,7 +272,7 @@ body {
   }
 
   .menu-icon {
-    font-size: 3rem; /* Ajusta el tamaño del ícono */
+    font-size: 1.2rem; /* Ajusta el tamaño del ícono */
   }
 
   .logo {
