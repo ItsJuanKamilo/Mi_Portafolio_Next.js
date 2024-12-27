@@ -8,8 +8,8 @@
 html, body {
   height: 100%;
   font-family: "Poppins", sans-serif;
-  overflow-y: auto; /* Permite scroll vertical si es necesario */
-  overflow-x: hidden; /* Evita scroll horizontal */
+  overflow-y: auto; /* Permite desplazamiento vertical si es necesario */
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
 }
 
 body {
@@ -46,7 +46,7 @@ body {
 /* Barra superior */
 .header-bar {
   position: absolute;
-  top: -20px;
+  top: 10px;
   left: 20px;
   right: 20px;
   display: flex;
@@ -57,18 +57,13 @@ body {
   color: #ffffff;
 }
 
-.role {
-  color: #ffffff;
-  text-shadow: 0 0 10px #e056fd, 0 0 30px #ffffff;
-}
-
-.info {
+.role, .info {
   color: #ffffff;
   text-shadow: 0 0 10px #e056fd, 0 0 30px #ffffff;
 }
 
 .logo {
-  width: 200px; /* Tamaño del logo */
+  width: 150px; /* Tamaño del logo */
   height: auto;
   margin-left: auto; /* Empuja el logo hacia la derecha */
   transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
@@ -87,7 +82,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  padding-left: 40px;
+  padding: 20px;
 }
 
 .name {
@@ -118,7 +113,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  padding: 20px 40px;
+  padding: 20px;
 }
 
 .description {
@@ -144,9 +139,9 @@ body {
   position: relative;
   width: clamp(50px, 8vw, 70px);
   height: clamp(50px, 8vw, 70px);
-  background: linear-gradient(45deg, #ff00cc, #333399, #001f19, #ff0066);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
+  background: linear-gradient(45deg, #ff00cc, #333399, #370064, #ff0066); /* Mismo gradiente que el fondo */
+  background-size: 400% 400%; /* Igual que el fondo */
+  animation: gradientAnimation 30s ease infinite; /* Reutiliza la misma animación del fondo */
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -157,7 +152,7 @@ body {
 }
 
 .menu-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Efecto de ampliación */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
@@ -207,58 +202,67 @@ body {
 
 .logos {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap; /* Permite que los logos se ajusten en varias líneas si es necesario */
+  gap: 20px; /* Espaciado entre los logos */
+  justify-content: center; /* Centra los logos horizontalmente */
 }
 
 .logos img {
-  height: clamp(30px, 5vw, 60px);
+  height: clamp(30px, 5vw, 60px); /* Ajuste dinámico del tamaño de los logos */
   width: auto;
   filter: drop-shadow(0 0 5px #ffffff);
   transition: transform 0.3s ease;
 }
 
 .logos img:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Efecto de ampliación al pasar el mouse */
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
   .main-content {
-    padding-left: 20px;
+    padding: 20px; /* Ajuste para pantallas más pequeñas */
   }
 
   .description-section {
-    padding: 10px 20px;
+    padding: 10px 20px; /* Reduce el padding en pantallas medianas */
   }
 
   .vertical-menu {
-    top: 20%;
-    right: 5%;
-    transform: translateY(0);
+    top: 20%; /* Mueve el menú hacia arriba */
+    right: 5%; /* Mantiene la posición desde el borde derecho */
+    transform: translateY(0); /* Elimina el centrado vertical */
+  }
+
+  .logo {
+    width: 100px; /* Reduce el tamaño del logo en pantallas medianas */
   }
 }
 
 @media (max-width: 480px) {
   .main-content {
-    padding-left: 10px;
+    padding: 10px; /* Reduce aún más el padding */
   }
 
   .description-section {
-    padding: 5px 10px;
+    padding: 5px 10px; /* Ajusta el padding para pantallas pequeñas */
   }
 
   .vertical-menu {
-    top: 10%;
-    right: 5%;
-    transform: translateY(0);
+    top: 10%; /* Menú más cerca del borde superior */
+    right: 5%; /* Mantiene la posición desde el borde derecho */
   }
 
   .menu-item {
-    width: clamp(40px, 10vw, 50px);
+    width: clamp(40px, 10vw, 50px); /* Botones más pequeños */
     height: clamp(40px, 10vw, 50px);
   }
 
   .menu-icon {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Ajusta el tamaño del ícono */
+  }
+
+  .logo {
+    width: 80px; /* Tamaño más pequeño para pantallas pequeñas */
   }
 }
