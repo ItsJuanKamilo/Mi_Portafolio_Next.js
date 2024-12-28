@@ -258,6 +258,17 @@ body {
     width: 70px;
     height: 70px;
   }
+  .menu-icon {
+    font-size: 2rem; /* Tamaño más grande para mejor visibilidad */
+  }
+  .header-bar {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    padding: 50px 0;
+    height: auto; /* Altura dinámica */
+  }
 }
 
 @media (max-width: 480px) {
