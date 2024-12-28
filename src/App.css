@@ -234,7 +234,16 @@ body {
 /* Ajustes para pantallas móviles */
 @media (max-width: 768px) {
   /* Centrar todo el contenido principal */
- 
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ajuste para contenido desplazable */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    height: auto; /* Altura dinámica */
+  }
 
   /* Baja el .name */
   .name {
@@ -243,8 +252,8 @@ body {
 
   /* Botones en la parte inferior */
   .vertical-menu {
-    position: fixed;
-    bottom: 0;
+    position: absolute; /* Cambia a posición relativa al contenedor */
+    bottom: 10px; /* Asegura que esté cerca de la parte inferior */
     left: 0;
     width: 100%; /* Ocupa toda la anchura */
     display: flex;
@@ -258,18 +267,16 @@ body {
     width: 70px;
     height: 70px;
   }
+
   .menu-icon {
     font-size: 2rem; /* Tamaño más grande para mejor visibilidad */
   }
-  
 }
 
 @media (max-width: 480px) {
-
   .header-bar .role {
     margin-bottom: 10px; /* Espaciado entre los elementos */
   }
-
 
   /* Baja el .name aún más */
   .name {
@@ -278,8 +285,8 @@ body {
 
   /* Botones organizados en la parte inferior */
   .vertical-menu {
-    position: fixed;
-    bottom: 0;
+    position: absolute; /* Cambia a posición relativa al contenedor */
+    bottom: 10px; /* Ajusta el espaciado desde la parte inferior */
     left: 0;
     width: 100%; /* Asegura que ocupe toda la anchura */
     display: flex;
