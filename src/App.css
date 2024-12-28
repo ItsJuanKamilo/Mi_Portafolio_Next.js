@@ -231,52 +231,79 @@ body {
   }
 }
 
-
-/* Media Queries */
+/* Ajustes para pantallas móviles */
 @media (max-width: 768px) {
-  .main-content {
-    padding: 20px; /* Ajuste para pantallas más pequeñas */
+  /* Centrar todo el contenido principal */
+ 
+
+  /* Baja el .name */
+  .name {
+    margin-top: 200px; /* Espaciado adicional para que baje */
   }
 
-  .description-section {
-    padding: 10px 20px; /* Reduce el padding en pantallas medianas */
-  }
-
+  /* Botones en la parte inferior */
   .vertical-menu {
-    top: 20%; /* Mueve el menú hacia arriba */
-    right: 5%; /* Mantiene la posición desde el borde derecho */
-    transform: translateY(0); /* Elimina el centrado vertical */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda la anchura */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Espaciado uniforme entre botones */
+    padding: 10px 0;
+    z-index: 10;
   }
 
-  .logo {
-    width: 100px; /* Reduce el tamaño del logo en pantallas medianas */
+  .menu-item {
+    width: 70px;
+    height: 70px;
   }
 }
 
 @media (max-width: 480px) {
-  .main-content {
-    padding: 10px; /* Reduce aún más el padding */
+  /* Barra superior reorganizada */
+  .header-bar {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    padding: 20px 0;
+    height: auto; /* Altura dinámica */
   }
 
-  .description-section {
-    padding: 5px 10px; /* Ajusta el padding para pantallas pequeñas */
+  .header-bar .role {
+    margin-bottom: 10px; /* Espaciado entre los elementos */
   }
 
+
+  /* Baja el .name aún más */
+  .name {
+    margin-top: 200px; /* Baja más en pantallas pequeñas */
+  }
+
+  /* Botones organizados en la parte inferior */
   .vertical-menu {
-    top: 15%; /* Menú más cerca del borde superior */
-    right: 9%; /* Mantiene la posición desde el borde derecho */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe toda la anchura */
+    display: flex;
+    flex-direction: row; /* Alinea los botones horizontalmente */
+    justify-content: space-around; /* Espaciado uniforme */
+    padding: 10px 0;
+    z-index: 10;
   }
 
   .menu-item {
-    width: clamp(40px, 10vw, 50px); /* Botones más pequeños */
-    height: clamp(40px, 10vw, 50px);
+    width: 60px;
+    height: 60px;
   }
 
   .menu-icon {
-    font-size: 1.2rem; /* Ajusta el tamaño del ícono */
+    font-size: 2rem; /* Tamaño más grande para mejor visibilidad */
   }
 
   .logo {
-    width: 80px; /* Tamaño más pequeño para pantallas pequeñas */
+    width: 100px; /* Ajusta el tamaño del logo */
   }
 }
