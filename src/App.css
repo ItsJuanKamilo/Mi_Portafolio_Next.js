@@ -250,6 +250,22 @@ body {
     margin-top: 200px; /* Espaciado adicional para que baje */
   }
 
+  /* Estilo para .dynamic-text */
+  .dynamic-text {
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Ajuste dinámico */
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #e056fd;
+    text-shadow: 0 0 10px #88008d, 0 0 30px #ffffff;
+    margin-top: 20px; /* Espaciado adicional para separar del .name */
+    text-align: center; /* Centra horizontalmente */
+  }
+
+  .word-placeholder {
+    display: inline-block;
+    min-width: 10ch; /* Mantiene un ancho mínimo para las palabras dinámicas */
+    text-align: center; /* Alineación centrada */
+  }
+
   /* Botones en la parte inferior */
   .vertical-menu {
     position: absolute; /* Cambia a posición relativa al contenedor */
@@ -281,6 +297,22 @@ body {
   /* Baja el .name aún más */
   .name {
     margin-top: 200px; /* Baja más en pantallas pequeñas */
+  }
+
+  /* Estilo para .dynamic-text */
+  .dynamic-text {
+    font-size: clamp(1.3rem, 3.5vw, 2.5rem); /* Ajuste dinámico menor para pantallas pequeñas */
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #e056fd;
+    text-shadow: 0 0 10px #88008d, 0 0 30px #ffffff;
+    margin-top: 20px;
+    text-align: center; /* Centra horizontalmente */
+  }
+
+  .word-placeholder {
+    display: inline-block;
+    min-width: 8ch; /* Ajuste dinámico para pantallas más pequeñas */
+    text-align: center; /* Centra el texto */
   }
 
   /* Botones organizados en la parte inferior */
