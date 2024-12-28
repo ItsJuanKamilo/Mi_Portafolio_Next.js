@@ -261,26 +261,10 @@ body {
   .menu-icon {
     font-size: 2rem; /* Tamaño más grande para mejor visibilidad */
   }
-  .header-bar {
-    flex-direction: column; /* Apila los elementos verticalmente */
-    justify-content: center;
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto */
-    padding: 50px 0;
-    height: auto; /* Altura dinámica */
-  }
+  
 }
 
 @media (max-width: 480px) {
-  /* Barra superior reorganizada */
-  .header-bar {
-    flex-direction: column; /* Apila los elementos verticalmente */
-    justify-content: center;
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto */
-    padding: 20px 0;
-    height: auto; /* Altura dinámica */
-  }
 
   .header-bar .role {
     margin-bottom: 10px; /* Espaciado entre los elementos */
