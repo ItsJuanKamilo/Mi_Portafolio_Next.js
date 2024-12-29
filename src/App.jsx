@@ -88,8 +88,8 @@ function App() {
           Ingeniería en Informática, con experiencia en desarrollo de software,
           análisis de datos y manejo de bases de datos. Me interesa trabajar con
           soluciones en la nube usando AWS en lo cual estoy aprendiendo
-          constantemente. Además me he dedicado a
-          programar ya sea aplicaciones web como aplicaciones móviles.
+          constantemente. Además me he dedicado a programar ya sea aplicaciones
+          web como aplicaciones móviles.
         </p>
       </section>
 
@@ -109,6 +109,11 @@ function App() {
           <img src="/logos/php.png" alt="PHP" />
         </div>
       </div>
+
+      {/* Footer con texto */}
+      <footer className="footer">
+        <p>© 2024 Juan Leiton. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

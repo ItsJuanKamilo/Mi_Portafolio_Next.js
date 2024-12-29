@@ -202,6 +202,21 @@ body {
   z-index: 10;
 }
 
+/* Footer */
+.footer {
+  position: absolute; /* Posición relativa al contenedor principal */
+  bottom: 80px; /* Posición encima de la barra de logos */
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  text-align: center; /* Centra el texto */
+  background: transparent; /* Fondo transparente para que no bloquee el fondo animado */
+  color: #ffffff; /* Texto blanco */
+  font-size: 1rem; /* Tamaño de letra */
+  padding: 5px 0; /* Espaciado interno */
+  text-shadow: 0 0 5px #ffffff, 0 0 10px rgba(255, 255, 255, 0.8); /* Efecto de sombra luminosa */
+}
+
+
 /* Contenedor de Logos */
 .logos {
   display: flex;
