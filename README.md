@@ -1,9 +1,1 @@
-# Juan Leiton
-
-Actualmente, cuento con experiencia en desarrollo de
-software, análisis de datos y manejo de bases de datos. Me
-interesa trabajar con soluciones en la nube utilizando AWS,
-en lo cual estoy aprendiendo constantemente. Además, me
-he dedicado a programar tanto aplicaciones web como
-aplicaciones móviles.
-
+Este es el primer portafolio que desarrollé utilizando Next.js. Está construido con React y CSS, y aunque es un portafolio básico, se destaca por su enfoque creativo en el diseño. Fue una excelente oportunidad para aplicar mis conocimientos en estas tecnologías y experimentar con conceptos visuales innovadores.
